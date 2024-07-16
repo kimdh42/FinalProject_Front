@@ -1,0 +1,23 @@
+.el_scheLabel{display:inline-block;border-radius:3px;padding:0 10px;line-height:2;color:#363636;}
+.el_scheLabel__all{background:#ebebeb;}
+.el_scheLabel__department{background:rgb(232, 240, 254);}
+.el_scheLabel__team{background:rgb(253, 236, 200);}
+.el_scheLabel__personal{background:rgb(245, 224, 233);}
+.el_scheLabel__detail{display:block;}
+.el_scheLabel__detail:hover::after{content:"+ 더보기";display:inline-block;color:#666;font-size:12px;margin-left:15px;}
+
+.el_scheIcon{background:no-repeat center/contain;width:24px;height:24px;}
+/* .el_scheIcon__write{background-image:url('/img//icon/icon_edit.png');} */
+.bl_task{}
+.el_task__alarm{background:#000;border-radius:50%;display:inline-block;width:24px;height:24px;line-height:22px;color:#fff;text-align:center;vertical-align:middle;}
+
+.bl_taskFeed{height:calc(100vh - 270px);overflow-y:scroll;padding-right:10px;}
+.bl_taskFeed__wrap{background:#fff;padding:10px;box-shadow:0px 4px 4px 0px #ccc;margin-top:10px;}
+.bl_taskFeed__wrap:first-child{margin-top:0;}
+.bl_taskFeed__profile{width:35px;height:35px;border-radius:50%;background:no-repeat center/contain;}
+.bl_taskFeed__ttl{font-size:16px;margin-left:10px;}
+.bl_taskFeed__date{color:#363636;}
+.bl_taskFeed__label{border-radius:3px;display:inline-block;padding:3px 5px;margin-left:5px;}
+.bl_taskFeed__labelHigh{color:red;}
+.bl_taskFeed__labelMiddle{color:blue;}
+.bl_taskFeed__labelLow{color:black;}

@@ -1,0 +1,118 @@
+table {
+    width: 100%;
+    /* 표를 화면 너비에 맞춤 */
+    border-collapse: collapse;
+    /* 테두리 겹치도록 설정 */
+}
+
+th,
+td {
+    border: 1px solid lightgray;
+    /* 테두리 추가 */
+    padding: 8px;
+    /* 셀 내부 여백 설정 */
+    text-align: center;
+    /* 셀 내용 가운데 정렬 */
+}
+
+h1 {
+    margin: 0;
+    /* 제목의 기본 마진 제거 */
+}
+
+tbody tr:last-child td {
+    border-bottom: 1px solid black;
+    /* 마지막 행의 셀에만 아래쪽 테두리 추가 */
+}
+
+.main {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 800px;
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 800px;
+}
+
+.button button {
+    margin: 0 5px;
+}
+
+.tableHead {
+    background-color: gray;
+}
+.searchZone {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.searchZone input {
+    margin-right: 10px;
+}
+
+
+
+
+
+
+/* BoradCreateView.css */
+.table-container {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table-container th, .table-container td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center; /* 중앙 정렬 */
+}
+
+.table-container th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+
+.button-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.button-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.button-group {
+    display: flex;
+    gap: 10px; /* 버튼 간의 간격 조정 */
+}
+
+.button-group h1 {
+    margin: 0; /* 제목의 기본 마진 제거 */
+}
+
+.button {
+    margin: 0 5px; /* 버튼의 양쪽에 마진 추가 */
+}
+
+/* 열 너비 조정 */
+.tableHead {
+    width: 20%;
+}
+
+.tableBody {
+    width: 50%;
+}
+
+.tablePermission {
+    width: 30%;
+}

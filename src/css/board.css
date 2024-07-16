@@ -1,0 +1,11 @@
+.bl_tb1 th{padding:14px 5px;}
+.bl_commentWrite{padding:20px 30px;}
+.bl_comment__profile{width:50px;height:50px;border-radius:50%;background:no-repeat center/cover;flex-shrink:0;}
+
+.bl_commentList>li{padding:20px 30px;border-top:1px solid #ebebeb;}
+.bl_comment__icon{background:no-repeat center/80%;width:20px;height:20px;vertical-align:middle;}
+.bl_comment__iconEdit{background-image:url('/img/icon/icon_edit.png');}
+.bl_comment__iconDelete{background-image:url('/img/icon/icon_bin.png');}
+
+.bl_boardPop__btn:hover .bl_boardPop{display:block;}
+.bl_boardPop{background:#bbb;position:absolute;top:5px;right:25px;width:150px;text-align:left;padding:10px;border-radius:5px;display:none;z-index:10;}

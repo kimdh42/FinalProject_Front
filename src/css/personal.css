@@ -1,0 +1,11 @@
+
+.bl_profile{}
+.bl_profile__img{background:no-repeat center/contain;width:150px;height:150px;overflow:hidden;border-radius:50%;margin:0 auto;}
+.bl_profile__sect{border-top:2px solid #ebebeb;padding:10px 20px;}
+.bl_profile__sect *{font-size:16px;line-height:2;}
+.bl_profile__tag{color:#777;margin-right:10px;letter-spacing:1.3;}
+.bl_profile__icon{display:block;color:#363636;}
+.bl_profile__icon:hover{text-decoration:underline;}
+.bl_profile__icon::before{content:"";background:no-repeat center/contain;display:inline-block;width:20px;height:20px;margin-right:10px;vertical-align:middle;}
+.bl_profile__iconEmail::before{background-image:url("../../public/images/icon/icon_email.png");}
+.bl_profile__iconContact::before{background-image:url("../../public/images/icon/icon_telephone.png");}

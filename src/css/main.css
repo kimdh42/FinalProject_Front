@@ -1,0 +1,65 @@
+.bl_mainProfile{}
+
+.bl_mainProfile__img {
+    display: block;
+    margin: 0 auto;
+    width: 150px;
+    height: 150px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #363636; /* 배경색 유지 */
+    border-radius: 50%;
+    overflow:hidden;
+}
+.bl_mainProfile__img img{margin-top:-37px;}
+
+.bl_mainProfile__alarm{display:inline-block;width:22px;height:22px;background:#000;color:#fff;border-radius:50%;text-align:center;margin-left:10px;vertical-align:1px;font-size:13px;line-height:20px;}
+
+.bl_miniProfile__img {
+    width: 50px;
+    height: 50px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    border-radius: 50%;
+}.bl_miniLabel{border:2px solid;border-radius:999px;padding:5px 0; width:80px;text-align:center;}
+
+.bl_miniLabel__1{border-color:#b64074;color:#b64074;}
+.bl_miniLabel__2{border-color:#3557b0;color:#3557b0;}
+.bl_miniLabel__3{border-color:#2a255d;color:#2a255d;}
+
+.bl_sort_approval {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+    background: url("../../public/images/icon/approval.png") no-repeat center/cover;
+    background-size: 70%;
+}
+
+.bl_sort_msg {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+    background: url("../../public/images/icon/msg.png") no-repeat center;
+    background-size: 70%;
+}
+
+.bl_sort_post {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+    background: url("../../public/images/icon/post.png") no-repeat center/cover;
+    background-size: 70%;
+}
+
+
+.bl_mainBoard{height:calc(100% - 53px);overflow-y:auto;}
+.bl_mainBoard__alarm{display:inline-block;background:#000;color:#fff;border-radius:50%;font-size:18px;width:30px;height:30px;text-align:center;vertical-align:5px;}
+.bl_mainBoard__delete{width:24px;height:24px;background:url("../../public/images/icon/icon_bin.png")no-repeat center/contain;background-size: 20px 20px;}
+.bl_mainBoard__read{opacity:0.6;}

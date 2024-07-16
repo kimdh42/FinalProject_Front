@@ -1,0 +1,95 @@
+
+.bl_tna__label{background:#000;color:#fff;border-radius:999px;text-align:center;padding:0 20px;flex-shrink:0;word-break:keep-all;}
+.bl_tna__label2{background:none;color:#000;font-weight:700;border: black 1px solid;}
+.bl_tna__label3{background:none;border: #006CD0 1.5px solid;border-radius:999px;text-align:center;padding:0 20px;flex-shrink:0;word-break:keep-all;}
+.bl_tna__label4{background:#006CD0;border: #006CD0 1.5px solid;border-radius:999px;text-align:center;padding:0 20px;flex-shrink:0;word-break:keep-all;}
+
+.bl_tnaWeek{line-height:2.5;}
+.bl_tnaWeek__ttl{flex-basis:120px;flex-shrink:0;}
+.bl_tnaWeek__list{max-width:700px;}
+.bl_tnaWeek__list *{font-size:16px;}
+
+/*.bl_tnaPageBtn{width:30px;height:30px;background:url("/img/icon/icon_arrow.png")no-repeat center/20px;}*/
+.el_btnD{border-radius:25px;width:80px;height:40px;}
+.el_btnT{border-radius:25px;width:80px;height:35px;}
+.bl_tnaPageBtn__prev{transform:rotate(180deg);}
+.bl_tnaPageBtn__next{}
+
+/* 애니메이션 */
+.time_table {height: 10px; transition: height 0.7s;}
+.time_table.go {height: 300px; transform: translateY(0px);}
+
+/* 섹션 */
+.section1 {top:100px; width: 370px;}
+.section2 {position: relative; width: 900px; top: -10px; z-index: 1; padding-left: 30px; padding-right: 30px;}
+.section2_pre {position: relative; width: 900px; top: -10px; z-index: 1; padding-left: 30px; padding-right: 30px;}
+.section2_title {position: relative; width: 900px; height: 75px; z-index: 2; padding: 20px 20px;}
+.section3 {position: sticky; top:100px; width: 180px;}
+.section3_title {text-align: center; font-size: 16px; padding-bottom: 10px;}
+.section3_btn {top:100px; width: 180px;}
+
+/* 자간 */
+.letter03 {letter-spacing : 0.3px;}
+
+/* 근태기록 테이블 */
+.bl_tnaWeek__list {display: flex; justify-content: space-between; padding: 0; list-style-type: none;}
+.bl_tnaWeek__item {margin-right: 20px; /* 각 항목 간격 조정 */}
+.bl_tnaWeek__item b {display: block; font-weight: 700;}
+.bl_tnaWeek__item span {margin-left: 5px; /* 항목 내 텍스트와 아이콘 간격 조정 */}
+
+/* 전환 버튼 */
+.bl_leaderBtn {background-color: black;border-radius:5px;padding:6px 10px;}
+.container {width: 100%; display: flex; justify-content: flex-start; padding: 20px;}
+#moveButton { padding: 10px 20px; font-size: 16px; cursor: pointer; transition: transform 0.5s ease;}
+#moveButton.move-right {transform: translateX(100%);}
+
+/* 차트 */
+.stacked-bar-chart {
+    background-color: #e3e3e3;
+    position: relative;
+    height: 20px; /* 막대 높이 */
+    width: 350px; /* 전체 너비 */
+    z-index: -1; /* 위에 겹치도록 설정 */
+}
+
+.cumulative,
+.regular {position: absolute;
+    height: 100%;
+    top: 0;
+    left: 0;
+    transform-origin: left center; /* 애니메이션 원점 설정 */
+    transition: transform 1s ease-in-out; /* 너비 변화 애니메이션 */
+}
+
+.cumulative {
+    background-color: #007bff; /* 누적 정규 근무 시간 막대 색상 */
+    transform: scaleX(0); /* 초기 너비 0으로 설정 */
+    z-index: 1; /* 위에 겹치도록 설정 */
+}
+
+.regular {
+    background-color: #28a745; /* 정규 근무 시간 막대 색상 */
+    transform: scaleX(0); /* 초기 너비 0으로 설정 */
+}
+
+.animate {
+    transform: scaleX(1); /* 너비 100%로 변경 */
+}
+
+.barFont {
+    text-align: right;
+    font-size: 14px;
+    margin-right: 4px;
+    margin-bottom: 2px;
+    color: white;
+}
+
+.barFont-background {
+    text-align: right;
+    font-size: 14px;
+    margin-right: 5px;
+    margin-bottom: 2px;
+    color: #ababab;
+}
+
+

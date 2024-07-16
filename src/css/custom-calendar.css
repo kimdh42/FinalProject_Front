@@ -1,0 +1,38 @@
+/* FullCalendar 버튼의 기본 스타일 */
+.fc .fc-button {
+    background-color: #4CAF50 !important; /* 원하는 배경색으로 변경 */
+    border: none !important;
+    color: white !important; /* 텍스트 색상 변경 */
+}
+
+.fc .fc-button:hover {
+    background-color: #45a049 !important; /* 호버 시 색상 변경 */
+}
+
+.fc .fc-button-primary {
+    background-color: #000000 !important; /* 원하는 기본 색상으로 변경 */
+    border: none !important;
+    color: white !important; /* 텍스트 색상 변경 */
+}
+
+.fc .fc-button-primary:hover {
+    background-color: #ffffff !important; /* 기본 버튼 호버 시 색상 변경 */
+    color: #000000 !important
+}
+
+.fc .fc-button-secondary {
+    background-color: #ffffff !important; /* 원하는 보조 색상으로 변경 */
+    border: none !important;
+    color: white !important; /* 텍스트 색상 변경 */
+}
+
+.fc .fc-button-secondary:hover {
+    background-color: #ffffff !important; /* 보조 버튼 호버 시 색상 변경 */
+}
+
+.fc-event {
+    height: 25px; /* 고정 높이 설정 */
+    overflow: hidden; /* 넘치는 내용 숨기기 */
+    white-space: nowrap; /* 한 줄로 표시 */
+    text-overflow: ellipsis; /* 말줄임표(...) 표시 */
+  }

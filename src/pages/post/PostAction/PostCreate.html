@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script crossorigin src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script src="https://unpkg.com/redux@4.2.0/dist/redux.js"></script>
+    <script src="https://unpkg.com/react-redux@8.1.3/dist/react-redux.js"></script>
+    <script src="https://unpkg.com/redux-actions@2.6.5/dist/redux-actions.js"></script>
+    <script src="https://unpkg.com/redux-logger@3.0.6/dist/redux-logger.js"></script>
+    <script src="https://cdn.ckeditor.com/ckeditor5/41.4.2/classic/ckeditor.js"></script>
+    <title>Document</title>
+
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th,
+        td {
+            border: 1px solid lightgray;
+            padding: 8px;
+            text-align: center;
+        }
+
+        h1 {
+            margin: 0;
+        }
+
+        tbody tr:last-child td {
+            border-bottom: 1px solid black;
+        }
+
+        .main {
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            max-width: 800px;
+        }
+
+        .button {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            max-width: 800px;
+        }
+
+        .button button {
+            margin: 0 5px;
+        }
+
+        .tableHead {
+            background-color: gray;
+        }
+
+        .searchZone {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .searchZone input {
+            margin-right: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="root"></div>
+
+    <script type="text/babel">
+        function App() {
+            const [formData, setFormData] = React.useState({
+                postName: '',
+                postCon: '',
+                attachFile: null
+            });
+
+            const handleInputChange = (event) => {
+                const { name, value, files } = event.target;
+                if (name === 'attachFile') {
+                    setFormData(prevState => ({
+                        ...prevState,
+                        attachFile: files[0]
+                    }));
+                } else {
+                    setFormData(prevState => ({
+                        ...prevState,
+                        [name]: value
+                    }));
+                }
+            };
+
+            const handleSubmit = async (event) => {
+                event.preventDefault();
+
+                const { postName, postCon, attachFile } = formData;
+                const formDataToSend = new FormData();
+                formDataToSend.append('postName', postName);
+                formDataToSend.append('postCon', postCon);
+                formDataToSend.append('attachFile', attachFile);
+
+                try {
+                    const response = await fetch('http://localhost:8080/post/add', {
+                        method: 'POST',
+                        body: formDataToSend,
+                        mode:"cors"
+                    });
+                    console.log("PostTest")
+                    const data = await response.json();
+                    console.log(data);
+                } catch (error) {
+                    console.error('Error submitting form:', error);
+                }
+            };
+
+            React.useEffect(() => {
+                ClassicEditor
+                    .create(document.querySelector('#editor'))
+                    .then(editor => {
+                        console.log(editor);
+                    })
+                    .catch(error => {
+                        console.error(error);
+                    });
+            }, []);
+
+            return (
+                <div className="main">
+                    <form onSubmit={handleSubmit}>
+
+                    <table>
+                        <thead>
+                            <tr>
+                                <th colSpan="4">게시판</th>
+                            </tr>
+                            <tr>
+                                <td>대분류</td>
+                                <td >
+                                    <select>
+                                        <option value="">선택하세요</option>
+                                        <option value="1">암환자회복식단</option>
+                                        <option value="2">신장관리식단</option>
+                                        <option value="3">혈압관리식단</option>
+                                        <option value="4">혈당관리식단</option>
+                                    </select>
+                                </td>
+                                <td>소분류</td>
+                                <td>
+                                    <select>
+                                        <option value="">선택하세요</option>
+                                        <option value="1">암환자회복식단</option>
+                                        <option value="2">신장관리식단</option>
+                                        <option value="3">혈압관리식단</option>
+                                        <option value="4">혈당관리식단</option>
+                                    </select>
+                                </td>
+
+                            </tr>
+                            <tr>
+                                <td>작성자</td>
+                                <td>김씨</td>
+                                <td>작성일</td>
+                                <td>2024.10.01</td>
+                            </tr>
+                            <tr>
+                                <td>알림</td>
+                                <td colSpan="3">
+                                    <label><input type="checkbox" value="sendCall" />알림 발송</label>
+                                    <label><input type="checkbox" value="sendMsg" />쪽지 발송</label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>첨부파일</td>
+                                <td colSpan="3"><input name="attachFile" type="file" /></td>
+                            </tr>
+                            <tr>
+                                <td>제목</td>
+                                <td colSpan="3"><input name="postName" type="text" placeholder="100자 이내 입력" /></td>
+                            </tr>
+                            <tr>
+                                <td>내용</td>
+                                <td colSpan="3">
+                                    <div id="editor" name="postCon">
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>설정</td>
+                                <td colSpan="3">
+                                    <label><input type="checkbox" value="ALLOW_NORMAL" name="postCommSet"/>댓글 허용</label>
+                                    <label><input type="checkbox" value="ALLOW_ANONYMOUS" name="postCommSet"/>익명 댓글 허용</label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colSpan="4">
+                                    <button>취소</button>
+                                    <button>임시저장</button>
+                                    <button type="submit">저장</button>
+                                </td>
+                            </tr>
+                        </thead>
+                    </table>
+                    </form>
+                </div>
+            );
+        }
+
+        ReactDOM.createRoot(document.getElementById('root')).render(
+            <App />
+        );
+    </script>
+</body>
+
+</html>

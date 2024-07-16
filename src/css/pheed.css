@@ -1,0 +1,8 @@
+.pheed-box {
+    transition: transform 0.3s ease;
+}
+
+.pheed-container {
+    display: flex;
+    flex-direction: column-reverse; /* 최신 피드가 위에 오도록 역순으로 배치 */
+}

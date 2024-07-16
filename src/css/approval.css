@@ -1,0 +1,32 @@
+.el_draftApply{display:inline-block;padding:5px 10px;border-radius:5px;border:1px solid #ebebeb;margin:5px 15px;margin-left:0;}
+.el_draftApply:hover{background-color:#e3f4ff;border-color:#e3f4ff;}
+
+.el_approvalSign{height:42px;background:no-repeat center/contain;padding:0px!important;min-width:120px;}
+.bl_rejectPop{position:absolute;}
+
+.el_approvalTb3__th th{width:200px;}
+
+.el_approvalRole__select{background:none;border:none;text-align:center;padding:10px;}
+
+/* 에디터 */
+.ck-content{height:500px;}
+.ck-content *{font-weight:400;}
+.ck-content strong{font-weight:bold;}
+.ck-content h2{font-size:1.5em;}
+.ck-content h3{font-size:1.3em;}
+.ck-content h4{font-size:1.15em;}
+.ck-content ul, .ck-content ol{padding-inline-start: 40px;}
+.ck-content ul>li{list-style-type:disc;}
+.ck-content ol>li{list-style-type:decimal;}
+
+/* 리스트 */
+.hp_lh34px{line-height:34px;}
+.hp_tr__click{cursor:pointer;}
+.hp_tr__click:hover{background:rgb(232, 240, 254);}
+.hp_tr__click td{word-break:break-all;}
+
+/* 결재내용 */
+.bl_tb3 td{word-break: initial;}
+
+/* 첨부파일 */
+.el_file__downBtn:hover{text-decoration:underline;}
